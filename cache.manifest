@@ -1,0 +1,18 @@
+CACHE MANIFEST
+# Cache manifest version 3.10
+
+pages/results2016.html
+css/foundation.min.css
+css/hb.css
+css/hb_result.css
+data/hills.csv
+data/lifts.csv
+data/patrollers.csv
+data/ZipCodeDatabase.csv
+images/NationalSkiPatrol.jpg
+scripts/jquery.js
+scripts/main.js
+scripts/result.js
+
+NETWORK:
+*

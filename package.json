@@ -1,0 +1,19 @@
+{
+	"name": "NNSPIncidentForm.2016",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"webpack": "latest",
+		"babel-preset-es2015": "latest",
+		"babel-loader": "latest",
+		"babel-eslint": "latest",
+		"babel-core": "latest"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}

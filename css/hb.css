@@ -1,0 +1,23 @@
+#nspLogo {
+	height: 60px;
+	width: 60px;
+	float: right;
+	margin-right: -20px;
+}
+
+legend {
+	font-size: large;
+	font-weight: bold;
+}
+
+.hb_border {
+	border: 1px solid #000000;
+}
+
+.rightBorder {
+	border-right: 1px solid #000000;
+}
+
+.commonHeight {
+	height: 40px;
+}
