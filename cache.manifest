@@ -2,6 +2,7 @@ CACHE MANIFEST
 # Cache manifest version 3.10
 
 pages/results2016.html
+pages/skiRental.html
 css/foundation.min.css
 css/hb.css
 css/hb_result.css
@@ -13,6 +14,7 @@ images/NationalSkiPatrol.jpg
 scripts/jquery.js
 scripts/main.js
 scripts/result.js
+scripts/rentalResult.js
 
 NETWORK:
 *
