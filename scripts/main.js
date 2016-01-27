@@ -797,6 +797,10 @@ function saveData(event) {
 
      //SUBMIT FORM TO RESULTS-------------------------------------------------------------------------------------------
      window.open('pages/results2016.html', '_self', false);
+     //noinspection Eslint
+     if (document.getElementById('ownerRent').checked || document.getElementById('ownerDemo').checked) {
+          window.open('pages/skiRental.html', '_blank', false);
+     }
      return false;
 
 }
