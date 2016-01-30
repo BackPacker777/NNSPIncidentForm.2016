@@ -219,8 +219,7 @@ function setHelmet() {
 function setHelmetRental() {
      var $helmetRent = document.forms[0].elements["helmetRental"];
      var $counter2 = 0;
-     $helmetRent[0].onclick = function() {
-		 alert("Remember: You must fill out a helmet rental form.");
+     $helmetRent[0].onclick = function () {
           var $div2 = document.createElement("div");
           $div2.id = "helmetRental";
           $div2.innerHTML = '<span class="label">Helmet rental number:</span><br>' +
@@ -258,8 +257,8 @@ function setVideoYes() {
 function setInstructor() {
      var $inst = document.forms[0].elements["inLesson"];
      var $counter = 0;
-     $inst[0].onclick = function() {
-		  alert("Remember: You must fill out an instructor witness statement form.");
+     $inst[0].onclick = function () {
+          alert("Remember: You must fill out an instructor witness statement form.");
           var $div = document.createElement("div");
           $div.id = "nameInst";
           $div.innerHTML = '<span class="label">Instructor</span><br>' +
@@ -300,16 +299,16 @@ function setOther() {
 function setEquipOther() {
      document.getElementById("otherEquipYes").style.visibility = "hidden";
      var other = document.forms[0].elements["equipmentType"];
-     other[3].onclick = function() {
+     other[3].onclick = function () {
           document.getElementById("otherEquipYes").style.visibility = "visible";
      };
-     other[0].onclick = function() {
+     other[0].onclick = function () {
           document.getElementById("otherEquipYes").style.visibility = "hidden";
      };
-     other[1].onclick = function() {
+     other[1].onclick = function () {
           document.getElementById("otherEquipYes").style.visibility = "hidden";
      };
-     other[2].onclick = function() {
+     other[2].onclick = function () {
           document.getElementById("otherEquipYes").style.visibility = "hidden";
      };
 }
@@ -319,25 +318,25 @@ function setDins() {
      document.getElementById("leftHeelDin").style.display = "none";
      document.getElementById("rightToeDin").style.display = "none";
      document.getElementById("rightHeelDin").style.display = "none";
-     document.getElementById("equipAlpine").addEventListener("click", function() {
+     document.getElementById("equipAlpine").addEventListener("click", function () {
           document.getElementById("leftToeDin").style.display = "block";
           document.getElementById("leftHeelDin").style.display = "block";
           document.getElementById("rightToeDin").style.display = "block";
           document.getElementById("rightHeelDin").style.display = "block";
      });
-     document.getElementById("equipNordic").addEventListener("click", function() {
+     document.getElementById("equipNordic").addEventListener("click", function () {
           document.getElementById("leftToeDin").style.display = "none";
           document.getElementById("leftHeelDin").style.display = "none";
           document.getElementById("rightToeDin").style.display = "none";
           document.getElementById("rightHeelDin").style.display = "none";
      });
-     document.getElementById("equipSnowboard").addEventListener("click", function() {
+     document.getElementById("equipSnowboard").addEventListener("click", function () {
           document.getElementById("leftToeDin").style.display = "none";
           document.getElementById("leftHeelDin").style.display = "none";
           document.getElementById("rightToeDin").style.display = "none";
           document.getElementById("rightHeelDin").style.display = "none";
      });
-     document.getElementById("equipOther").addEventListener("click", function() {
+     document.getElementById("equipOther").addEventListener("click", function () {
           document.getElementById("leftToeDin").style.display = "none";
           document.getElementById("leftHeelDin").style.display = "none";
           document.getElementById("rightToeDin").style.display = "none";
@@ -396,7 +395,7 @@ function setRental() {
           document.getElementById("rentalEquip").style.display = "none";
      };
      // Demo
-     $rental[4].onclick = function() {
+     $rental[4].onclick = function () {
           document.getElementById("rentalEquip").style.display = "block";
           populateRental("nubs");
           clearRentalAddress();
@@ -415,7 +414,7 @@ function loadPatrollers($placePatroller, $counter) {
      } else {
           $select.appendTo('#' + $placePatroller);
           var $chosePatroller = document.forms[0].elements[$patrollerLocation];
-          $chosePatroller.onchange = function(e) {
+          $chosePatroller.onchange = function (e) {
                if ($placePatroller === "scenePatrollers") {
                     if (undefined != $scenePatrollersSave) {
                          if (document.getElementById("scenePatrollers" + $counter).value === "OTHER") {
@@ -428,7 +427,7 @@ function loadPatrollers($placePatroller, $counter) {
                          }
                     } else {
                          if (document.getElementById("scenePatrollers" + $counter).value === "OTHER") {
-                             var otherPatroller2 = prompt("Please enter other patroller name: ");
+                              var otherPatroller2 = prompt("Please enter other patroller name: ");
                               $scenePatrollersSave = otherPatroller2 + "; ";
                               $scenePatrollersSave = $scenePatrollersSave.replace(/(\r\n|\n|\r)/gm, "");
                          } else {
@@ -478,7 +477,8 @@ function loadPatrollers($placePatroller, $counter) {
                     }
                }
                $counter++;
-               e.target.onchange = function() { };
+               e.target.onchange = function () {
+               };
                $('#' + $placePatroller).append("<input type='none' id='" + $patrollerLocation + "Names' name='" + $placePatroller + "Names' value='" + $(e.target).val() + "' hidden>");
                loadPatrollers($placePatroller, $counter);
           }
@@ -524,7 +524,7 @@ function handleWitnesses() {
      var $state = ("w" + $witnessCounter + "State");
 
 //WITNESSES-------------------------------------------------------------------------------------------------------------
-     document.getElementById($witnessZip).onchange = function() {
+     document.getElementById($witnessZip).onchange = function () {
           populateCityState(document.getElementById($witnessZip).value);
           document.getElementById($city).value = $cityState[0];
           var state = $cityState[1].replace(/(\r\n|\n|\r)/gm, "");
@@ -797,16 +797,18 @@ function saveData(event) {
 
      //SUBMIT FORM TO RESULTS-------------------------------------------------------------------------------------------
      window.open('pages/results2016.html', '_self', false);
-     //noinspection Eslint
-     if (document.getElementById('ownerRent').checked || document.getElementById('ownerDemo').checked) {
+     if (document.getElementById('equipAlpine').checked && document.getElementById('ownerRent').checked || document.getElementById('ownerDemo').checked) {
           window.open('pages/skiRental.html', '_blank', false);
+     }
+     if (document.getElementById('helmetRentalYes').checked) {
+          window.open('pages/helmetRental.html', '_blank', false);
      }
      return false;
 
 }
 
 function reloadForm() {
-	 sessionStorage.clear();
+     sessionStorage.clear();
      window.location.reload();
 }
 
@@ -829,13 +831,15 @@ window.onload = function () {
      loadPatrollers('aidRoomPatrollers', 0);
      loadPatrollers('reportCompleter', 0);
      loadPatrollers('statementTaker', 0);
-     document.getElementById('addWitness').addEventListener('click', function() {handleWitnesses(0)}, false);
+     document.getElementById('addWitness').addEventListener('click', function () {
+          handleWitnesses(0)
+     }, false);
      document.getElementById("date").value = setDate();
      document.getElementById("day").value = setWeekDayString();
      $(document).load().scrollTop(0); //ensure page starts at top
      document.getElementById('form').addEventListener("submit", saveData, false);
      document.getElementById('reset').addEventListener("click", reloadForm, false);
-	 document.getElementById('reset1').addEventListener("click", reloadForm, false);
+     document.getElementById('reset1').addEventListener("click", reloadForm, false);
 };
 
 

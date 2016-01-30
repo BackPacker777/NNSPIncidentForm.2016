@@ -1,8 +1,9 @@
 CACHE MANIFEST
-# Cache manifest version 3.10
+# Cache manifest version 3.20
 
 pages/results2016.html
 pages/skiRental.html
+pages/helmetRental.html
 css/foundation.min.css
 css/hb.css
 css/hb_result.css
@@ -15,6 +16,7 @@ scripts/jquery.js
 scripts/main.js
 scripts/result.js
 scripts/rentalResult.js
+scripts/helmetResult.js
 
 NETWORK:
 *
