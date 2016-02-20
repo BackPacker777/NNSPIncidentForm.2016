@@ -14,10 +14,18 @@ legend {
 	border: 1px solid #000000;
 }
 
+:required {
+	background: yellow;
+}
+
 .rightBorder {
 	border-right: 1px solid #000000;
 }
 
 .commonHeight {
 	height: 40px;
+}
+
+#noPrint {
+	display: none;
 }

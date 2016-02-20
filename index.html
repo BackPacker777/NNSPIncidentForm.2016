@@ -6,16 +6,17 @@
 	PURPOSE: NNSP Incident Form
 	TODO:
 -->
-<!--<html lang="en" manifest="cache.manifest">-->
-<html lang="en">
+<html lang="en" manifest="cache.manifest">
+<!--<html lang="en">-->
 	<head>
 		<meta charset="utf-8">
 		<title>NNSP Incident Form</title>
 		<link href="css/foundation.min.css" rel="stylesheet">
 		<link media="screen" href="css/hb.css" rel="stylesheet">
+		<link href="css/NoPrint.css" rel="stylesheet">
 	</head>
 	<body>
-		<div class="row">
+		<div class="row" id="topMast">
 			<div class="small-5 columns">
 				<h2>NNSP Incident Form</h2>
 			</div>
@@ -26,18 +27,18 @@
 			</div>
 		</div>
 		<div class="panel radius">
-			<form id='form' method="get" novalidate>
-			<!--<form id='form' method="get">-->
+			<!--<form id='form' method="get" novalidate>-->
+			<form id='form' method="get">
 				<div class="row">
 					<fieldset id='dateTime'>
 						<legend>Date &amp; Time</legend>
 						<div class="small-4 columns">
 							<span class="label">Day</span><br>
-							<input name='day' id='day' type='text'>
+							<input name='day' id='day' type='text' required>
 						</div>
 						<div class="small-4 columns">
 							<span class="label">Date</span><br>
-							<input name='date' id='date' type='text'>
+							<input name='date' id='date' type='text' required>
 						</div>
 						<div class="small-4 columns end">
 							<span class="label">Incident Time</span><br>
@@ -463,6 +464,14 @@
 					</fieldset>
 				</div>
 			</form>
+		</div>
+		<div id="noPrint">
+			<br><br><br><br><br><br><br><br>
+			<h1>THE FORM IS NOT COMPLETE FOR PRINTING!</h1>
+			<br><br>
+			<h1>PLEASE FINISH THE FORM BEFORE TRYING TO PRINT.</h1>
+			<br><br>
+			<img src='images/warn.png' alt='WARNING' id='warnPic'>
 		</div>
 
 		<!-- SCRIPTS -->
